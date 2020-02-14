@@ -6,11 +6,11 @@
 	"repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/monero-project/markdown"
+            "url": "https://github.com/byterubpay/markdown"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/monero-project/php-markdown"
+            "url": "https://github.com/byterubpay/php-markdown"
         }
     ],
 	"require": {
