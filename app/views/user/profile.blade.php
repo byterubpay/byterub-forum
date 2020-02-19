@@ -30,8 +30,8 @@
 		<div class="col-md-6">
 		<h2>User Details</h2>
 			<ul>
-			@if ($user->monero_address != NULL)
-				<li class="user-details">ByteRub Address: {{{ $user->monero_address }}}</li>
+			@if ($user->byterub_address != NULL)
+				<li class="user-details">ByteRub Address: {{{ $user->byterub_address }}}</li>
 			@endif
 			@if ($user->website != NULL)
 				<li class="user-details">Website Address: <a href="{{{ $user->website }}}" rel="nofollow" target="_blank">{{{ $user->website }}}</a></li>

@@ -14,7 +14,7 @@
 		<div class="clearfix"></div>
 		<div class="col-lg-12">
 			<div class="progress">
-				<div class="progress-bar progress-monero progress-bar-striped" style="width: {{ $thread->funding->percentage() }}%;">
+				<div class="progress-bar progress-byterub progress-bar-striped" style="width: {{ $thread->funding->percentage() }}%;">
 					<span class="sr-only">{{ $thread->funding->percentage() }}% Funded</span>
 				</div>
 			</div>

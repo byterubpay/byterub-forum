@@ -5,7 +5,7 @@
 	<div>
 		<i class="fa fa-usd funding-icon"></i>
 		<div class="progress forum-progress">
-			<div class="progress-bar progress-monero progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ $thread->funding->percentage() }}%;">
+			<div class="progress-bar progress-byterub progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ $thread->funding->percentage() }}%;">
 			</div>
 		</div>
 	</div>

@@ -16,7 +16,7 @@ module Kramdown
   module Converter
     class Html
       def convert_img(el, indent)
-        el.attr["src"] = "https://forum.getmonero.org/get/image?link=" + URI.escape(el.attr["src"])
+        el.attr["src"] = "https://forum.getbyterub.org/get/image?link=" + URI.escape(el.attr["src"])
           "<img#{html_attributes(el.attr)} class=\"markdown-responsive\" />"
         end
       end

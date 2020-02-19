@@ -160,16 +160,16 @@ text {
 	display: inline-block;
 }
 
-.monero-news a {
+.byterub-news a {
 	color: #505050;
 	font-weight: bold;
 }
 
-.monero-news .news-title {
+.byterub-news .news-title {
 	color: #5b9a6f;
 }
 
-.monero-news .news-text {
+.byterub-news .news-text {
 	color: #505050;
 }
 
@@ -187,7 +187,7 @@ text {
 	padding-top: 20px;
 }
 
-.box-green .moneropedia {
+.box-green .byterubpedia {
 	color: #9cdab0;
 }
 
@@ -252,7 +252,7 @@ h2.inline {
 	font-size: 15px;
 }
 
-.bottom-boxes .moneropedia {
+.bottom-boxes .byterubpedia {
 	color: #aaaaaa;
 }
 
@@ -473,11 +473,11 @@ body {
 	padding-top: 20px;
 }
 
-.info-boxes .monero-info {
+.info-boxes .byterub-info {
 	padding-right: 120px;
 }
 
-.info-boxes .monero-news {
+.info-boxes .byterub-news {
 	padding-right: 90px;
 }
 
@@ -845,10 +845,10 @@ body:before {
 	.bottom-boxes p {
 		max-width: none;
 	}
-	.monero-info, .monero-news {
+	.byterub-info, .byterub-news {
 		padding-right: 5px !important;
 	}
-	.monero-info {
+	.byterub-info {
 		padding-bottom: 40px;
 	}
 	.info-boxes h2  {
@@ -884,7 +884,7 @@ body:before {
 		margin-bottom: 0;
 	}
 
-	.monero-news, .monero-info {
+	.byterub-news, .byterub-info {
 		padding-right: 0 !important;
 	}
 

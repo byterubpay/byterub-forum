@@ -1,5 +1,5 @@
 {
-    "name": "eddieh/monero",
+    "name": "eddieh/byterub",
     "description": "ByteRub payments integration for Laravel, based on MalMen's ByteRub-PHP library.",
     "authors": [
         {

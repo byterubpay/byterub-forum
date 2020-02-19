@@ -18,7 +18,7 @@ class ByteRubServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('eddieh/monero');
+		$this->package('eddieh/byterub');
 	}
 
 	/**
@@ -28,7 +28,7 @@ class ByteRubServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['monero'] = $this->app->share(function($app)
+		$this->app['byterub'] = $this->app->share(function($app)
 		{
 			return new ByteRub;
 		});

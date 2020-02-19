@@ -14,10 +14,10 @@ class ByteRub
 
 	function __construct()
 	{
-		$this->expire = Config::get('monero::expire');
-		$this->wallet = Config::get('monero::wallet');
-		$this->address = Config::get('monero::address');
-		$this->alias = Config::get('monero::alias');
+		$this->expire = Config::get('byterub::expire');
+		$this->wallet = Config::get('byterub::wallet');
+		$this->address = Config::get('byterub::address');
+		$this->alias = Config::get('byterub::alias');
 	}
 
 	public static function generatePaymentID($var = false)
@@ -81,7 +81,7 @@ class ByteRub
 		$data = [
 			'jsonrpc' => '2.0',
 			'method' => 'getbalance',
-			'id' => 'phpmonero',
+			'id' => 'phpbyterub',
 			'params' => []
 		];
 
@@ -121,7 +121,7 @@ class ByteRub
 			$data = [
 				'jsonrpc' => '2.0',
 				'method' => 'get_bulk_payments',
-				'id' => 'phpmonero',
+				'id' => 'phpbyterub',
 				'params' => [
 					'payment_ids' => [],
 					'min_block_height' =>  $highest_block
@@ -133,7 +133,7 @@ class ByteRub
 			$data = [
 				'jsonrpc' => '2.0',
 				'method' => 'get_bulk_payments',
-				'id' => 'phpmonero',
+				'id' => 'phpbyterub',
 				'params' => [
 					'payment_ids' => []
 				]
@@ -196,7 +196,7 @@ class ByteRub
 			$data = [
 				'jsonrpc' => '2.0',
 				'method' => 'transfer',
-				"id" => "phpmonero",
+				"id" => "phpbyterub",
 				"params" => [
 					'destinations' => [],
 					'payment_id' => $payment_id,
@@ -260,7 +260,7 @@ class ByteRub
 		$amount = $amount / 1000000000000;
 		if($code == 'XMR')
 			return $amount;
-		$values = file_get_contents('https://moneropric.es/fiat.json');
+		$values = file_get_contents('https://byterubpric.es/fiat.json');
 		$values = json_decode($values);
 		foreach($values as $value) {
 			if($value->code == $code)

@@ -17,7 +17,7 @@ class AddUserFieldsToUsersTable extends Migration {
 			$table->string('profile_picture')->default('no_picture.jpg');
 			$table->boolean('email_public');
 			$table->string('website')->nullable();
-			$table->string('monero_address')->nullable();
+			$table->string('byterub_address')->nullable();
 		});
 	}
 
@@ -34,7 +34,7 @@ class AddUserFieldsToUsersTable extends Migration {
 			$table->dropColumn('profile_picture');
 			$table->dropColumn('email_public');
 			$table->dropColumn('website');
-			$table->dropColumn('monero_address');
+			$table->dropColumn('byterub_address');
 		});
 	}
 
