@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'prefix' => 'monero',
+	'prefix' => 'byterub',
 	
 	/*
 	|

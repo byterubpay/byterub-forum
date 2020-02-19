@@ -1,6 +1,6 @@
 {
     "name": "eddieh/monero",
-    "description": "Monero payments integration for Laravel, based on MalMen's Monero-PHP library.",
+    "description": "ByteRub payments integration for Laravel, based on MalMen's ByteRub-PHP library.",
     "authors": [
         {
             "name": "Edvinas Paulauskas",
@@ -17,7 +17,7 @@
             "src/models"
         ],
         "psr-0": {
-            "Eddieh\\Monero\\": "src/"
+            "Eddieh\\ByteRub\\": "src/"
         }
     },
     "minimum-stability": "stable"

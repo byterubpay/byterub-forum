@@ -37,7 +37,7 @@
 				</div>
 				<div class="form-group">
 					<div class="row">
-				    	<label class="col-sm-2 control-label">Monero Address <small>(optional)</small></label>
+				    	<label class="col-sm-2 control-label">ByteRub Address <small>(optional)</small></label>
 						<div class="col-sm-10">
 							<input type="text" name="monero_address" class="form-control" value="{{{ $user->monero_address }}}">
 						</div>

@@ -1,10 +1,10 @@
-<?php namespace Eddieh\Monero;
+<?php namespace Eddieh\ByteRub;
 
 use Config;
 use Log;
 use Funding;
 
-class Monero
+class ByteRub
 {
 
 	public $expire;
@@ -62,7 +62,7 @@ class Monero
 	{
 		$amount = $xmr * 1000000000000;
 
-		if ($amount == 0 || !Monero::validateAddress($address)) {
+		if ($amount == 0 || !ByteRub::validateAddress($address)) {
 			return false;
 		}
 

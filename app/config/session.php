@@ -96,7 +96,7 @@ return array(
 	|
 	*/
 
-	'cookie' => 'monero_session',
+	'cookie' => 'byterub_session',
 
 	/*
 	|--------------------------------------------------------------------------

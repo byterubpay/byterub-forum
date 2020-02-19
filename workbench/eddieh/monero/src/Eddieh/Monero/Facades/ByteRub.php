@@ -6,11 +6,11 @@
  * Time: 13:19
  */
 
-namespace Eddieh\Monero\Facades;
+namespace Eddieh\ByteRub\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Monero extends Facade {
+class ByteRub extends Facade {
 
 	/**
 	 * Get the registered name of the component.

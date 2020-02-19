@@ -1,7 +1,7 @@
 <?php
 
-use Eddieh\Monero\Payment;
-use Eddieh\Monero\Monero;
+use Eddieh\ByteRub\Payment;
+use Eddieh\ByteRub\ByteRub;
 
 class AdminController extends \BaseController {
 
@@ -424,7 +424,7 @@ class AdminController extends \BaseController {
 		Payment::create([
 			'block_height'  => -1,
 			'status'        => 'complete',
-			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('monero::expire'))),
+			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('byterub::expire'))),
 			'type'          => 'receive',
 			'amount'        => Input::get('amount'),
 			'payment_id'    => $funding->payment_id
@@ -450,7 +450,7 @@ class AdminController extends \BaseController {
 		Payment::create([
 			'block_height'  => -2,
 			'status'        => 'complete',
-			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('monero::expire'))),
+			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('byterub::expire'))),
 			'type'          => 'receive',
 			'amount'        => Input::get('amount'),
 			'payment_id'    => $to->payment_id
@@ -460,7 +460,7 @@ class AdminController extends \BaseController {
 		Payment::create([
 			'block_height'  => -2,
 			'status'        => 'complete',
-			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('monero::expire'))),
+			'expires_at'    => date("Y-m-d H:i", strtotime("now " . Config::get('byterub::expire'))),
 			'type'          => 'receive',
 			'amount'        => 0 - Input::get('amount'),
 			'payment_id'    => $from->payment_id

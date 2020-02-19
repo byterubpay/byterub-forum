@@ -50,11 +50,11 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::missing(function($e)
 {
-    return View::make('errors.404', array('title' => 'Monero | Page not found. Error: 404'));
+    return View::make('errors.404', array('title' => 'ByteRub | Page not found. Error: 404'));
 });
 
 App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $e) {
-	return View::make('errors.404', array('title' => 'Monero | Page not found. Error: 404'));
+	return View::make('errors.404', array('title' => 'ByteRub | Page not found. Error: 404'));
 });
 
 App::error(function(Exception $e, $code)

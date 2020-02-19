@@ -140,7 +140,7 @@ Route::filter('gpg-auth', function() {
 		$is_auth = $path != 'gpg-auth';
 
 		if (!$user->gpg_auth && $is_auth && $is_message && $is_logout && $user->in_wot && $user->key_id) {
-			$otcp = "forum.monero:" . str_random(40) . "\n";
+			$otcp = "forum.byterub:" . str_random(40) . "\n";
 
 			$key_id = $user->key_id;
 

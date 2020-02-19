@@ -1,6 +1,6 @@
 <?php
 
-use Eddieh\Monero\Monero;
+use Eddieh\ByteRub\ByteRub;
 use Helge\SpamProtection\SpamProtection;
 use Helge\SpamProtection\Types;
 use App\Providers\SpamProtectionCacheServiceProvider;
@@ -130,7 +130,7 @@ class ThreadsController extends \BaseController
 
 			$stickied = Post::where('thread_id', $thread->id)->where('is_sticky', true)->orderBy('created_at', 'DESC')->get();
 
-			return View::make('threads.show', array('stickied' => $stickied, 'queued' => $queued, 'resource_id' => $thread_id, 'posts' => $posts['list'], 'links' => $posts['links'], 'thread' => $thread, 'title' => 'Monero | ' . $thread->forum->name . ' &raquo; ' . $thread->name));
+			return View::make('threads.show', array('stickied' => $stickied, 'queued' => $queued, 'resource_id' => $thread_id, 'posts' => $posts['list'], 'links' => $posts['links'], 'thread' => $thread, 'title' => 'ByteRub | ' . $thread->forum->name . ' &raquo; ' . $thread->name));
 		} else {
 			App::abort(404);
 		}
@@ -147,7 +147,7 @@ class ThreadsController extends \BaseController
 		//if user hasn't reached thread creation limit then proceed
 		if (!Thread::userCanSubmitThread(Auth::user())) return Redirect::to(URL::previous())->with('messages', array('You have reached your daily thread limit of ' . Config::get('app.thread_daily_limit')));
 
-		return View::make('threads.create', array('forum' => $forum, 'title' => 'Monero | Creating a thread in ' . $forum->name));
+		return View::make('threads.create', array('forum' => $forum, 'title' => 'ByteRub | Creating a thread in ' . $forum->name));
 	}
 
 	public function submitCreate()
@@ -244,7 +244,7 @@ class ThreadsController extends \BaseController
 								'target'        => Input::get('target'),
 								'currency'      => Input::get('currency'),
 								'thread_id'     => $thread->id,
-								'payment_id'    => Monero::generatePaymentID($thread->id),
+								'payment_id'    => ByteRub::generatePaymentID($thread->id),
 							]);
 						}
 						else
@@ -280,7 +280,7 @@ class ThreadsController extends \BaseController
 
 			return Redirect::to($thread->forum->permalink())->with('messages', array('The thread has been deleted.'));
 		} else {
-			return View::make('errors.permissions', array('title' => 'Monero | Page not found. Error: 404'));
+			return View::make('errors.permissions', array('title' => 'ByteRub | Page not found. Error: 404'));
 		}
 	}
 

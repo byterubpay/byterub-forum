@@ -1,8 +1,8 @@
-<?php namespace Eddieh\Monero;
+<?php namespace Eddieh\ByteRub;
 
 use Illuminate\Support\ServiceProvider;
 
-class MoneroServiceProvider extends ServiceProvider {
+class ByteRubServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -30,12 +30,12 @@ class MoneroServiceProvider extends ServiceProvider {
 	{
 		$this->app['monero'] = $this->app->share(function($app)
 		{
-			return new Monero;
+			return new ByteRub;
 		});
 		$this->app->booting(function()
 		{
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Monero', 'Eddieh\Monero\Facades\Monero');
+			$loader->alias('ByteRub', 'Eddieh\ByteRub\Facades\ByteRub');
 		});
 	}
 

@@ -28,7 +28,7 @@ $env = $app->detectEnvironment(array(
 
 	'local' => array('homestead'),
 	'zeus' => array('Zeus'),
-	'monero' => array('electrum.payb.ee'),
+	'byterub' => array('electrum.payb.ee'),
 
 ));
 

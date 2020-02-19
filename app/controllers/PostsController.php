@@ -1,6 +1,6 @@
 <?php
 
-use Eddieh\Monero\Monero;
+use Eddieh\ByteRub\ByteRub;
 use Helge\SpamProtection\SpamProtection;
 use Helge\SpamProtection\Types;
 use App\Providers\SpamProtectionCacheServiceProvider;
@@ -198,7 +198,7 @@ class PostsController extends \BaseController {
 						'thread_id'     => $post->thread_id,
 						'currency'      => Input::get('currency'),
 						'target'        => Input::get('target'),
-						'payment_id'    => Monero::generatePaymentID($thread_id)
+						'payment_id'    => ByteRub::generatePaymentID($thread_id)
 					]);
 				}
 				else if ($post->thread->head()->id == $post->id && $funding_validator->fails() && $is_funding)

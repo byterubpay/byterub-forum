@@ -55,13 +55,13 @@ return array(
 
 	/* Other Settings */
 
-	'project_dir' 						=> '/home/monero-private/',
+	'project_dir' 						=> '/home/byterub-private/',
 
 	/* Email Settings */
 
-	'from_email'						=> 'noreply@getmonero.org',
-	'from_name'							=> 'The Monero Project',
-	'welcome_email_subject'				=> 'Welcome to the Monero Forums',
+	'from_email'						=> 'noreply@getbyterub.org',
+	'from_name'							=> 'The ByteRub Project',
+	'welcome_email_subject'				=> 'Welcome to the ByteRub Forums',
 	'recovery_email_subject'			=> 'Password Recovery',
 
 	/* GPG Settings */
@@ -95,7 +95,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://monero.forum',
+	'url' => 'http://byterub.forum',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -197,7 +197,7 @@ return array(
 		'Creitive\Breadcrumbs\BreadcrumbsServiceProvider',
 		'Roumen\Feed\FeedServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-		'Eddieh\Monero\MoneroServiceProvider',
+		'Eddieh\ByteRub\ByteRubServiceProvider',
 		'Msurguy\Honeypot\HoneypotServiceProvider',
 		'App\Providers\SpamProtectionCacheServiceProvider',
 
@@ -272,7 +272,7 @@ return array(
 		'Image'			  => 'Intervention\Image\Facades\Image',
 		'Breadcrumbs'	  => 'Creitive\Breadcrumbs\Facades\Breadcrumbs',
 		'Feed'   		  => 'Roumen\Feed\Facades\Feed',
-		'Monero'          => 'Eddieh\Monero\Facades\Monero',
+		'ByteRub'          => 'Eddieh\ByteRub\Facades\ByteRub',
 		'Honeypot' 		  => 'Msurguy\Honeypot\HoneypotFacade'
 	),
 

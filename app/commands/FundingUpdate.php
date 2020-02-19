@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Console\Command;
-use Eddieh\Monero\Monero;
+use Eddieh\ByteRub\ByteRub;
 
 
 class FundingUpdate extends Command {
@@ -37,13 +37,13 @@ class FundingUpdate extends Command {
 	 */
 	public function fire()
 	{
-		$this->info('Monero Address: '.Config::get('monero::address'));
-		$this->info('Wallet Address: '.Config::get('monero::wallet'));
+		$this->info('ByteRub Address: '.Config::get('byterub::address'));
+		$this->info('Wallet Address: '.Config::get('byterub::wallet'));
 		$this->info('Updating the funding data.');
 		$funding = Funding::all();
 		$this->info('Receiving funds.');
-		$monero = new Monero;
-		$monero->clientReceive();
+		$byterub = new ByteRub;
+		$byterub->clientReceive();
 		$this->info('Funds received.');
 		$this->info('Updating cache.');
 		foreach($funding as $thread)

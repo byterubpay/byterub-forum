@@ -43,9 +43,9 @@ class NotificationsController extends \BaseController
 
 				$notifications = $hash->user->notifications()->orderBy('created_at', 'DESC')->take(20)->get();
 
-				$feed->title = $hash->user->username.' Notifications | Monero Forum';
-				$feed->description = 'Monero Forum Notifications for '. $hash->user->username;
-				$feed->logo = 'http://static.getmonero.org/images/logo.svg';
+				$feed->title = $hash->user->username.' Notifications | ByteRub Forum';
+				$feed->description = 'ByteRub Forum Notifications for '. $hash->user->username;
+				$feed->logo = 'http://static.getbyterub.org/images/logo.svg';
 				$feed->link = route('notifications.rss', [$hash->hash]);
 				$feed->setDateFormat('datetime'); // 'datetime', 'timestamp' or 'carbon'
 				$feed->pubdate = $notifications[0]->created_at;

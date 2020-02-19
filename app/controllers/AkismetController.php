@@ -39,7 +39,7 @@ class AkismetController extends \BaseController {
 				->delete();
 		}
 
-		$comment['blog'] = "https://forum.getmonero.org/";
+		$comment['blog'] = "https://forum.getbyterub.org/";
 		$comment['user_ip'] = $post->ip;
 		$comment['user_agent'] = $post->user_agent;
 		$comment['referrer'] = $post->referrer;
@@ -72,7 +72,7 @@ class AkismetController extends \BaseController {
 
 		//mark as spam in akismet.
 
-		$comment['blog'] = "https://forum.getmonero.org/";
+		$comment['blog'] = "https://forum.getbyterub.org/";
 		$comment['user_ip'] = $post->ip;
 		$comment['user_agent'] = $post->user_agent;
 		$comment['referrer'] = $post->referrer;
@@ -108,7 +108,7 @@ class AkismetController extends \BaseController {
 
 		$post = Post::findOrFail($id);
 
-		$comment['blog'] = "https://forum.getmonero.org/";
+		$comment['blog'] = "https://forum.getbyterub.org/";
 		$comment['user_ip'] = $post->ip;
 		$comment['user_agent'] = $post->user_agent;
 		$comment['referrer'] = $post->referrer;

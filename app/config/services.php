@@ -15,7 +15,7 @@ return array(
 	*/
 
 	'mailgun' => array(
-		'domain' => 'forum.getmonero.org',
+		'domain' => 'forum.getbyterub.org',
 		'secret' => 'secret',
 
 	),

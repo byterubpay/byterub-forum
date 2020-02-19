@@ -12,6 +12,6 @@ Thumbs.db
 /app/storage/logs/*.log
 /.idea
 /app/config/local/*
-/app/config/monero/*
+/app/config/byterub/*
 /_ide_helper.php
 /node_modules

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@if(isset($title)){{ $title }}@else{{ 'Monero | Forum' }}@endif</title>
+    <title>@if(isset($title)){{ $title }}@else{{ 'ByteRub | Forum' }}@endif</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -26,19 +26,19 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 	@yield('description')
-	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency, crypto money, mining crypto currencies, virtual currency">
+	<meta name="keywords" content="byterub, xmr, bitbyterub, cryptocurrency, crypto money, mining crypto currencies, virtual currency">
 
     @yield('css')
 
 	@if(App::environment() == 'local')
 	<link href="/style.css" rel="stylesheet">
 	@else
-	<link href="//static.getmonero.org/style.css" rel="stylesheet">
+	<link href="//static.getbyterub.org/style.css" rel="stylesheet">
 	@endif
 
     <!--[if lt IE 9]>
-      <script src="//static.getmonero.org/js/html5shiv.js"></script>
-      <script src="//static.getmonero.org/js/respond.min.js"></script>
+      <script src="//static.getbyterub.org/js/html5shiv.js"></script>
+      <script src="//static.getbyterub.org/js/respond.min.js"></script>
     <![endif]-->
 
   </head>
@@ -61,13 +61,13 @@
       <div class="container">
           <div class="footer-links">
 	          <ul class="fa-ul">
-		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getmonero.org/legal/terms">Terms</a></li>
-		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getmonero.org/legal/privacy">Privacy</a></li>
-		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getmonero.org/legal/copyright">Copyright</a></li>
+		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getbyterub.org/legal/terms">Terms</a></li>
+		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getbyterub.org/legal/privacy">Privacy</a></li>
+		          <li><i class="fa-li fa fa-dot-circle-o"></i><a href="//getbyterub.org/legal/copyright">Copyright</a></li>
 	          </ul>
       </div>
-          <a class="footer-icon" href="https://getmonero.org/feed.xml"><i class="fa fa-2x fa-rss-square"></i></a>
-          <a class="footer-icon" href="mailto:dev@getmonero.org"><i class="fa fa-2x fa-envelope-square"></i></a>
+          <a class="footer-icon" href="https://getbyterub.org/feed.xml"><i class="fa fa-2x fa-rss-square"></i></a>
+          <a class="footer-icon" href="mailto:dev@getbyterub.org"><i class="fa fa-2x fa-envelope-square"></i></a>
     </div>
     </div>
 
@@ -77,7 +77,7 @@
 	@if(App::environment() == 'local')
     <script src="/scripts.js"></script>
     @else
-    <script src="//static.getmonero.org/scripts.js"></script>
+    <script src="//static.getbyterub.org/scripts.js"></script>
     @endif
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

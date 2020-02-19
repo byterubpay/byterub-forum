@@ -42,7 +42,7 @@ return array(
 			'username'  => 'vagrant',
 			'key'       => '/home/vagrant/.ssh/id_rsa',
 			'keyphrase' => 'katite',
-			'root'      => '~/monero/public',
+			'root'      => '~/byterub/public',
 		),
 
 	),

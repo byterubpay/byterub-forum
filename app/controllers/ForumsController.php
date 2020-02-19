@@ -18,7 +18,7 @@ class ForumsController extends \BaseController {
 		else {
 			$queued = false;
 		}
-		return View::make('forums.show', array('queued' => $queued, 'resource_id' => $forum_id,'threads' => $threads, 'forum' => $forum, 'title' => 'Monero | '.$forum->name));
+		return View::make('forums.show', array('queued' => $queued, 'resource_id' => $forum_id,'threads' => $threads, 'forum' => $forum, 'title' => 'ByteRub | '.$forum->name));
 	}
 
 }

@@ -35,7 +35,7 @@ gulp.task('combine-js', ['minify-js'], function() {
         'app/assets/js/min/jquery.dataTables.min.js',
         'app/assets/js/min/jquery.infinitescroll.min.js',
         'app/assets/js/min/jquery.autosize.js',
-        'app/assets/js/min/monero.js',
+        'app/assets/js/min/byterub.js',
         'app/assets/js/min/posts.js',
         'app/assets/js/min/register.js'
     ])

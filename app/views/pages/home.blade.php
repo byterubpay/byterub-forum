@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('description')
-	<meta name="description" content="Monero is a digital currency that is secure, private, and untraceable." />
+	<meta name="description" content="ByteRub is a digital currency that is secure, private, and untraceable." />
 @stop
 
 @section('content')

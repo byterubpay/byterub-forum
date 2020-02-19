@@ -88,7 +88,7 @@ class UsersController extends BaseController
 					if (!Input::get('otcp')) {
 
 						$key = GPG::find(Input::get('username'));
-						$otcp = "forum.monero:" . str_random(40) . "\n"; //generate a random password of 40 chars.
+						$otcp = "forum.byterub:" . str_random(40) . "\n"; //generate a random password of 40 chars.
 
 						if ($key && $key->keyid) {
 							$key_id = $key->keyid;
@@ -242,12 +242,12 @@ class UsersController extends BaseController
 
 	public function showLogin()
 	{
-		return View::make('user.login', array('title' => 'Monero | User Login'));
+		return View::make('user.login', array('title' => 'ByteRub | User Login'));
 	}
 
 	public function showRegister()
 	{
-		return View::make('user.register', array('title' => 'Monero | User Registration'));
+		return View::make('user.register', array('title' => 'ByteRub | User Registration'));
 	}
 
 	public function logout()
@@ -261,7 +261,7 @@ class UsersController extends BaseController
 		$user = User::where('username', $username)->firstOrFail();
 		$ratings = $user->rated()->orderBy('created_at', 'desc')->paginate(10);
 		if ($user)
-			return View::make('user.profile', array('user' => $user, 'ratings' => $ratings, 'title' => 'Monero | User &raquo; ' . $user->username));
+			return View::make('user.profile', array('user' => $user, 'ratings' => $ratings, 'title' => 'ByteRub | User &raquo; ' . $user->username));
 		else {
 			App::abort(404);
 			return View::make('errors.404');
@@ -273,7 +273,7 @@ class UsersController extends BaseController
 		$user = Auth::user();
 		$ratings = $user->rated()->orderBy('created_at', 'desc')->paginate(10);
 		if ($user)
-			return View::make('user.profile', array('user' => $user, 'self' => true, 'ratings' => $ratings, 'title' => 'Monero | User &raquo; ' . $user->username));
+			return View::make('user.profile', array('user' => $user, 'self' => true, 'ratings' => $ratings, 'title' => 'ByteRub | User &raquo; ' . $user->username));
 		else
 			return View::make('errors.404');
 	}
@@ -299,7 +299,7 @@ class UsersController extends BaseController
 				$ratings = $user->ratings()->whereRaw('rating > 0')->orderBy('created_at', 'desc')->paginate($ratings_pp);
 			else $ratings = $user->ratings()->orderBy('created_at', 'desc')->paginate($ratings_pp);
 		}
-		return View::make('user.ratings', array('ratings' => $ratings, 'user' => $user, 'title' => 'Monero | ' . $user->username . ' ratings'));
+		return View::make('user.ratings', array('ratings' => $ratings, 'user' => $user, 'title' => 'ByteRub | ' . $user->username . ' ratings'));
 	}
 
 	public function threads($user_id)
@@ -324,7 +324,7 @@ class UsersController extends BaseController
 
 	public function settings()
 	{
-		return View::make('user.settings', array('user' => Auth::user(), 'title' => 'Monero | User Settings'));
+		return View::make('user.settings', array('user' => Auth::user(), 'title' => 'ByteRub | User Settings'));
 	}
 
 	public function settingsSave()
@@ -346,12 +346,12 @@ class UsersController extends BaseController
 				$errors[] = 'Wrong email format or already in use.';
 		}
 
-		//update Monero Address if not empty or null.
-		if (Input::has('monero_address') && Input::get('monero_address') != '') {
-			if (substr(Input::get('monero_address'), 0, 1) == 4 && strlen(Input::get('monero_address')) > 60)
-				$user->monero_address = Input::get('monero_address');
+		//update ByteRub Address if not empty or null.
+		if (Input::has('byterub_address') && Input::get('byterub_address') != '') {
+			if (substr(Input::get('byterub_address'), 0, 1) == 4 && strlen(Input::get('byterub_address')) > 60)
+				$user->byterub_address = Input::get('byterub_address');
 			else
-				$errors[] = 'Incorrect Monero address format!';
+				$errors[] = 'Incorrect ByteRub address format!';
 		}
 
 		//update Website if not empty or null.
@@ -469,7 +469,7 @@ class UsersController extends BaseController
 			else if ($pubkey == -3)
 				return Redirect::to(URL::previous())->with('errors', array('Looks like something went wrong with retrieving your key. Please try again later.'));
 
-			$otcp = "forum.monero:" . str_random(40) . "\n";
+			$otcp = "forum.byterub:" . str_random(40) . "\n";
 
 			putenv("GNUPGHOME=/tmp");
 			$gpg = new gnupg();
@@ -598,7 +598,7 @@ class UsersController extends BaseController
 			if ($user->in_wot && $user->key_id) {
 				$key_id = $user->key_id;
 
-				$otcp = "forum.monero:" . str_random(40) . "\n";
+				$otcp = "forum.byterub:" . str_random(40) . "\n";
 
 				putenv("GNUPGHOME=/tmp");
 				$gpg = new gnupg();

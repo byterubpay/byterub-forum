@@ -132,8 +132,8 @@ Event::listen('message.sent', function($pm)
 		$conversation_id = $pm->conversation->id;
 
 		Mail::send('emails.pm', $data, function ($message) use ($receiver, $pm, $sender, $conversation_id) {
-			$message->from('conversation-' . $conversation_id . '@getmonero.org', Config::get('app.from_name'));
-			$message->to($receiver->email)->subject('New private message on the Monero Forum');
+			$message->from('conversation-' . $conversation_id . '@getbyterub.org', Config::get('app.from_name'));
+			$message->to($receiver->email)->subject('New private message on the ByteRub Forum');
 		});
 	}
 });

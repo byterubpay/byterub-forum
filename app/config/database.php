@@ -49,7 +49,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'monero',
+			'database'  => 'byterub',
 			'username'  => 'homestead',
 			'password'  => 'secret',
 			'charset'   => 'utf8',

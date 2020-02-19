@@ -1,4 +1,4 @@
-<?php namespace Eddieh\Monero;
+<?php namespace Eddieh\ByteRub;
 
 class Payment extends \Eloquent {
 
