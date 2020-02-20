@@ -16,15 +16,15 @@
 		<div class="row funding-info-block">
 			<div class="col-md-4">
 				<h3 class="text-center">Total Required</h3>
-				<h4 class="text-center">XMR {{ number_format(Funding::totalRequired(), 2, ".", ",") }}</h4>
+				<h4 class="text-center">BTR {{ number_format(Funding::totalRequired(), 2, ".", ",") }}</h4>
 			</div>
 			<div class="col-md-4">
 				<h3 class="text-center">Total Funded</h3>
-				<h4 class="text-center">XMR {{ number_format(Funding::totalFunded(), 2, ".", ",") }}</h4>
+				<h4 class="text-center">BTR {{ number_format(Funding::totalFunded(), 2, ".", ",") }}</h4>
 			</div>
 			<div class="col-md-4">
 				<h3 class="text-center">Available Funds</h3>
-				<h4 class="text-center">XMR {{ number_format(Funding::totalAvailable(), 2, ".", ",") }}</h4>
+				<h4 class="text-center">BTR {{ number_format(Funding::totalAvailable(), 2, ".", ",") }}</h4>
 			</div>
 		</div>
 
@@ -39,7 +39,7 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<i class="fa fa-li fa-money"></i> <b>Funded:</b> {{ number_format ($item->funded(), 2, ".", ",") }} {{ $item->currency }} |
-										<i class="fa fa-li fa-money"></i> <b>Paid Out:</b> {{ $item->payouts()->sum('amount') }} XMR |
+										<i class="fa fa-li fa-money"></i> <b>Paid Out:</b> {{ $item->payouts()->sum('amount') }} BTR |
 										<i class="fa fa-li fa-money"></i> <b>Remaining Balance:</b> {{ number_format ($item->balance(), 2, ".", ",") }} {{ $item->currency }}
 									</div>
 								</div>

@@ -26,7 +26,7 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 	@yield('description')
-	<meta name="keywords" content="byterub, xmr, bitbyterub, cryptocurrency, crypto money, mining crypto currencies, virtual currency">
+	<meta name="keywords" content="byterub, btr, bitbyterub, cryptocurrency, crypto money, mining crypto currencies, virtual currency">
 
     @yield('css')
 

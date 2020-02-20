@@ -74,7 +74,7 @@
 							@foreach($thread->funding->payouts as $payout)
 								<li>
 									<i class="fa-li fa fa-circle-thin"></i>
-									{{ $payout->amount }} XMR ({{ $payout->created_at->formatLocalized('%A %d %B %Y') }})
+									{{ $payout->amount }} BTR ({{ $payout->created_at->formatLocalized('%A %d %B %Y') }})
 								</li>
 							@endforeach
 						</ul>
@@ -84,6 +84,6 @@
 		</div>
 	</div>
 	{{--@foreach(\Eddieh\ByteRub\Payment::where('payment_id', $thread->funding->payment_id)->get() as $backer)--}}
-	{{--XMR -> {{ \Eddieh\ByteRub\ByteRub::convert($backer->amount, 'XMR') }} USD -> {{ \Eddieh\ByteRub\ByteRub::convert($backer->amount, 'USD') }}<br/>--}}
+	{{--BTR -> {{ \Eddieh\ByteRub\ByteRub::convert($backer->amount, 'BTR') }} USD -> {{ \Eddieh\ByteRub\ByteRub::convert($backer->amount, 'USD') }}<br/>--}}
 	{{--@endforeach--}}
 </div>

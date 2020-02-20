@@ -12,7 +12,7 @@ class Payment extends \Eloquent {
 		'block_height'
 	];
 
-	protected $table = 'xmr_payments';
+	protected $table = 'btr_payments';
 
 	public function funding() {
 		return $this->belongsTo('Funding', 'payment_id', 'payment_id');

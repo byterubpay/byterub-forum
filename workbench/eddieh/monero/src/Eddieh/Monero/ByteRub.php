@@ -36,9 +36,9 @@ class ByteRub
 		return $payment_id;
 	}
 
-	public function receive($xmr, $payment_id_var = false)
+	public function receive($btr, $payment_id_var = false)
 	{
-		$amount = $xmr * 1000000000000;
+		$amount = $btr * 1000000000000;
 
 		$payment_id = $this->generatePaymentID($payment_id_var);
 
@@ -58,9 +58,9 @@ class ByteRub
 		return $payment;
 	}
 
-	public function transfer($address, $xmr = 0 /* amount in XMR*/)
+	public function transfer($address, $btr = 0 /* amount in BTR*/)
 	{
-		$amount = $xmr * 1000000000000;
+		$amount = $btr * 1000000000000;
 
 		if ($amount == 0 || !ByteRub::validateAddress($address)) {
 			return false;
@@ -256,9 +256,9 @@ class ByteRub
 	}
 
 	public static function convert($amount, $code = 'USD') {
-		//convert XMR
+		//convert BTR
 		$amount = $amount / 1000000000000;
-		if($code == 'XMR')
+		if($code == 'BTR')
 			return $amount;
 		$values = file_get_contents('https://byterubpric.es/fiat.json');
 		$values = json_decode($values);
@@ -266,7 +266,7 @@ class ByteRub
 			if($value->code == $code)
 			{
 
-				return $amount / $value->{'xmr-rate'};
+				return $amount / $value->{'btr-rate'};
 
 			}
 		}

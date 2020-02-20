@@ -12,7 +12,7 @@ class CreateXmrPaymentsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('xmr_payments', function(Blueprint $table) {
+		Schema::create('btr_payments', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
 			$table->enum('type', ['receive', 'transfer']);
@@ -32,7 +32,7 @@ class CreateXmrPaymentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('xmr_payments');
+		Schema::drop('btr_payments');
 	}
 
 }

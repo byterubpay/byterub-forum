@@ -8,7 +8,7 @@
 
 	<ul>
 	@foreach($payouts as $payout)
-		<li>{{ $payout->amount }} XMR - {{ $payout->created_at->formatLocalized('%A %d %B %Y') }}</li>
+		<li>{{ $payout->amount }} BTR - {{ $payout->created_at->formatLocalized('%A %d %B %Y') }}</li>
 	@endforeach
 	</ul>
 @stop
